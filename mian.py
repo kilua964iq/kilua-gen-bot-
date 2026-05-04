@@ -77,6 +77,15 @@ try:
     print("✅ Webhook deleted successfully")
 except Exception as e:
     print(f"⚠️ Error deleting webhook: {e}")
+	@bot.message_handler(commands=['test123'])
+def test_buttons(message):
+    if str(message.from_user.id) != OWNER_ID:
+        return
+    buttons = get_buttons_from_db('main_menu')
+    if buttons:
+        bot.reply_to(message, f"✅ Found {len(buttons)} buttons in main_menu")
+    else:
+        bot.reply_to(message, "❌ No buttons found in main_menu")
     
 LOADING_VIDEO_URL = "https://t.me/Mustafa964iq/3"
 # ==================== SUPABASE CONNECTION ====================
