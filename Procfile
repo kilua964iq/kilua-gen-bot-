@@ -1,0 +1,1 @@
+web: python mian.py
