@@ -71,6 +71,12 @@ logger = logging.getLogger(__name__)
 bot = telebot.TeleBot("8726365736:AAGsf8RXHNTosJcJE6G8djFlNxVwdWgizsI")
 OWNER_ID = 1013384909
 admin = '1013384909'
+# Force delete any existing webhook to prevent 409 conflict
+try:
+    bot.delete_webhook()
+    print("✅ Webhook deleted successfully")
+except Exception as e:
+    print(f"⚠️ Error deleting webhook: {e}")
 LOADING_VIDEO_URL = "https://t.me/Mustafa964iq/3"
 # ==================== SUPABASE CONNECTION ====================
 from supabase import create_client, Client
