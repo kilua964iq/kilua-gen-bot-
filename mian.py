@@ -68,7 +68,7 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
-bot = telebot.TeleBot("8726365736:AAGsf8RXHNTosJcJE6G8djFlNxVwdWgizsI")
+bot = telebot.TeleBot("8726365736:AAG1Zu7XrQp0EXsT8X8KB0Ld-LMAilIZbxA")
 OWNER_ID = 1013384909
 admin = '1013384909'
 # Force delete any existing webhook to prevent 409 conflict
