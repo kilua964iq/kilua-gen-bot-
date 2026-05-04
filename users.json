@@ -1,0 +1,21 @@
+{
+    "users": {
+        "6285783725": {
+            "id": 66285783725,
+            "username": "xdell",
+            "first_name": "𓆩⸼ 𝐄𝐋 𝐒𝐨𝐍𝐬 ⸼𓆪",
+            "last_name": "",
+            "registration_date": "2026-04-22 18:40:48",
+            "user_number": 1
+        },
+        "1013384909": {
+            "id": 1013384909,
+            "username": "O8380",
+            "first_name": "مصطفى النجم",
+            "last_name": "🇮🇶",
+            "registration_date": "2026-04-30 22:06:52",
+            "user_number": 2
+        }
+    },
+    "user_counter": 2
+}
