@@ -211,7 +211,17 @@ def get_buttons_from_db(menu_name):
     except Exception as e:
         logger.error(f"Error getting buttons from DB: {e}")
         return []
-
+# ==== TEST CODE - DELETE LATER ====
+@bot.message_handler(commands=['test_buttons'])
+def test_buttons(message):
+    if str(message.from_user.id) != OWNER_ID:
+        return
+    buttons = get_buttons_from_db('main_menu')
+    if buttons:
+        bot.reply_to(message, f"✅ Found {len(buttons)} buttons in main_menu")
+    else:
+        bot.reply_to(message, "❌ No buttons found in main_menu")
+# ==== END TEST CODE ====
 def create_main_menu_keyboard(user_id=None):
     """Create main menu keyboard - dynamic from database"""
     markup = InlineKeyboardMarkup(row_width=2)
